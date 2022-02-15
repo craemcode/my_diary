@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        My Diary
+    </title>
+</head>
+<body>
+    <h1>My Diary</h1>
+    <script>
+
+        if('geolocation' in navigator) {
+            /* geolocation is available */
+            navigator.geolocation.getCurrentPosition(async position => {
+            const lat = position.coords.latitude
+            const lon = position.coords.longitude
+            document.querySelector('#lat').textContent = lat.toFixed(2)
+            document.querySelector('#lon').textContent = lon.toFixed(2)
+           
+            const data = { lat, lon}
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+
+            }
+            
+            //fetch data from server
+            async function sendData(){
+            const response = await fetch('/api', options)
+            const resdata = await response.json()
+            console.log(resdata)
+            }
+
+            const b = document.querySelector('#button')
+            b.addEventListener('click',()=>{sendData()})
+
+
+        
+        
+        
+        
+        })
+
+          } else {
+            /* geolocation IS NOT available */
+            console.log('geolocaion not available')
+          }
+          
+    </script>
+    <p>
+        latitude: <span id="lat"></span> &deg;<br>
+        longitude: <span id="lon"></span>&deg;
+        <a href="/view.html">go to view</a>
+
+        <button id="button"> Send Data</button>
+    </p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "my_diary",
+  "version": "1.0.0",
+  "description": "This is serverside javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craemcode/my_diary.git"
+  },
+  "keywords": [
+    "server",
+    "side"
+  ],
+  "author": "Zachariah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craemcode/my_diary/issues"
+  },
+  "homepage": "https://github.com/craemcode/my_diary#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.15"
+  }
+}
