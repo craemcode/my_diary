@@ -29,11 +29,13 @@ database.loadDatabase()
 
 
     app.post('/api',(request,response)=> {
-    console.log('I have received the folllowing data: ',request.body)
+
     const data = request.body
     const time = Date.now()
     data.timestamp = time
     database.insert(data)
-    response.json(data)
+    
+    res = {code: '200', time: time}
+    response.json(res)
     
     })
