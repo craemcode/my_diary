@@ -8,28 +8,6 @@
 </head>
 <body>
     <h1>Data from the db</h1>
-    <script>
-       getData()
-       async function getData(){
-            const response = await fetch('/api')
-            const data = await response.json()
-            
-            for (item of data){
-                const root = document.createElement('div')
-                const time = document.createElement('div')
-                const position = document.createElement('div')
-                const datestring = new Date(item.timestamp).toLocaleString()
-                
-                
-                time.textContent = datestring
-                position.textContent = 'latitude: ' + item.lat + ' longitude: ' + item.lon
-
-                root.append(time, position)
-                document.body.append(root)
-            }
-       }
-       
-       
-    </script>
+    
 </body>
 </html>
