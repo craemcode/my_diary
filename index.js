@@ -1,9 +1,27 @@
-const express = require('express')
 const Datastore = require('nedb')
 
 
+const express = require('express')
+const https = require('https')
+const http = require('http')
+const fs = require('fs')
+
 const app = express()
-app.listen(3000, ()=> console.log('server listening'))
+/*var options = {
+    key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
+    cert: fs.readFileSync('test/fixtures/keys/agent2-cert.cert')
+  }*/
+
+app.listen(5000, '192.168.100.25')
+
+
+
+
+
+
+
+
+
 
 app.use(express.static('public'))
 app.use(express.json({limit: '1mb'}))
