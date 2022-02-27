@@ -1,5 +1,0 @@
-
-{"topic":"coding","note":"I solved the problem of a button press multiple times by using a promise. Promises in javascript sound so nice. Will read more on them.","timestamp":1645106631930,"_id":"bd0rPu5CUfbwiizv"}
-{"topic":"trust","note":"japs","timestamp":1645106806282,"_id":"05dipju1JO2YSHIs"}
-{"topic":"Coding","note":"Now the fucking thing works","timestamp":1645110017494,"_id":"Bx5CP613sHnGCy0y"}
-{"topic":"Coding","note":"Never catch errors in an async function if you plan on using the promise it returns\n","timestamp":1645110149056,"_id":"oPoIA5XVRcwvi3fu"}

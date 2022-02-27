@@ -141,6 +141,17 @@ async function sendData() {
 
 }
 
+async function queryData(){
+    params = 'test'
+    const response = await fetch(`/search/${params}`)
+    const resdata = await response.json()
+    
+    console.log(resdata)
+
+}
+
+queryData()
+
 
 
 

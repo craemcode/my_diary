@@ -4,7 +4,8 @@
   "description": "This is serverside javascript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,10 @@
   "homepage": "https://github.com/craemcode/my_diary#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "nedb": "^1.8.0",
+    "knex": "^1.0.3",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.15"
   }
 }
